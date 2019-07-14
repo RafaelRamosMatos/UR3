@@ -50,13 +50,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
    FILES
-   #data_msg.msg
-   join0.msg
-   join1.msg
-   join2.msg
-   join3.msg
-   join4.msg
-   join5.msg
+   arm_msg.msg
  )
 
 ## Generate services in the 'srv' folder

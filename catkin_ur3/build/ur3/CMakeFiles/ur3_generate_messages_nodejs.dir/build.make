@@ -53,51 +53,16 @@ CMAKE_BINARY_DIR = /home/rafael/UR3/catkin_ur3/build
 # Include the progress variables for this target.
 include ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/progress.make
 
-ur3/CMakeFiles/ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join5.js
-ur3/CMakeFiles/ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join4.js
-ur3/CMakeFiles/ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join0.js
-ur3/CMakeFiles/ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join3.js
-ur3/CMakeFiles/ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join1.js
-ur3/CMakeFiles/ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join2.js
+ur3/CMakeFiles/ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/arm_msg.js
 
 
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join5.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join5.js: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ur3/join5.msg"
-	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg
-
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join4.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join4.js: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ur3/join4.msg"
-	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg
-
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join0.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join0.js: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from ur3/join0.msg"
-	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg
-
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join3.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join3.js: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from ur3/join3.msg"
-	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg
-
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join1.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join1.js: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from ur3/join1.msg"
-	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg
-
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join2.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join2.js: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from ur3/join2.msg"
-	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg
+/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/arm_msg.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/arm_msg.js: /home/rafael/UR3/catkin_ur3/src/ur3/msg/arm_msg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ur3/arm_msg.msg"
+	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/arm_msg.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg
 
 ur3_generate_messages_nodejs: ur3/CMakeFiles/ur3_generate_messages_nodejs
-ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join5.js
-ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join4.js
-ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join0.js
-ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join3.js
-ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join1.js
-ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/join2.js
+ur3_generate_messages_nodejs: /home/rafael/UR3/catkin_ur3/devel/share/gennodejs/ros/ur3/msg/arm_msg.js
 ur3_generate_messages_nodejs: ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/build.make
 
 .PHONY : ur3_generate_messages_nodejs

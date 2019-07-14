@@ -1,27 +1,27 @@
 ;; Auto-generated. Do not edit!
 
 
-(when (boundp 'ur3::data_msg)
+(when (boundp 'ur3::arm_msg)
   (if (not (find-package "UR3"))
     (make-package "UR3"))
-  (shadow 'data_msg (find-package "UR3")))
-(unless (find-package "UR3::DATA_MSG")
-  (make-package "UR3::DATA_MSG"))
+  (shadow 'arm_msg (find-package "UR3")))
+(unless (find-package "UR3::ARM_MSG")
+  (make-package "UR3::ARM_MSG"))
 
 (in-package "ROS")
-;;//! \htmlinclude data_msg.msg.html
+;;//! \htmlinclude arm_msg.msg.html
 
 
-(defclass ur3::data_msg
+(defclass ur3::arm_msg
   :super ros::object
   :slots (_pose _velocity _torque ))
 
-(defmethod ur3::data_msg
+(defmethod ur3::arm_msg
   (:init
    (&key
-    ((:pose __pose) (make-array 5 :initial-element 0.0 :element-type :float))
-    ((:velocity __velocity) (make-array 5 :initial-element 0.0 :element-type :float))
-    ((:torque __torque) (make-array 5 :initial-element 0.0 :element-type :float))
+    ((:pose __pose) (make-array 6 :initial-element 0.0 :element-type :float))
+    ((:velocity __velocity) (make-array 6 :initial-element 0.0 :element-type :float))
+    ((:torque __torque) (make-array 6 :initial-element 0.0 :element-type :float))
     )
    (send-super :init)
    (setq _pose __pose)
@@ -40,42 +40,42 @@
   (:serialization-length
    ()
    (+
-    ;; float32[5] _pose
-    (* 4    5)
-    ;; float32[5] _velocity
-    (* 4    5)
-    ;; float32[5] _torque
-    (* 4    5)
+    ;; float32[6] _pose
+    (* 4    6)
+    ;; float32[6] _velocity
+    (* 4    6)
+    ;; float32[6] _torque
+    (* 4    6)
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; float32[5] _pose
-     (dotimes (i 5)
+     ;; float32[6] _pose
+     (dotimes (i 6)
        (sys::poke (elt _pose i) (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
        )
-     ;; float32[5] _velocity
-     (dotimes (i 5)
+     ;; float32[6] _velocity
+     (dotimes (i 6)
        (sys::poke (elt _velocity i) (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
        )
-     ;; float32[5] _torque
-     (dotimes (i 5)
+     ;; float32[6] _torque
+     (dotimes (i 6)
        (sys::poke (elt _torque i) (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
        )
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; float32[5] _pose
+   ;; float32[6] _pose
    (dotimes (i (length _pose))
      (setf (elt _pose i) (sys::peek buf ptr- :float)) (incf ptr- 4)
      )
-   ;; float32[5] _velocity
+   ;; float32[6] _velocity
    (dotimes (i (length _velocity))
      (setf (elt _velocity i) (sys::peek buf ptr- :float)) (incf ptr- 4)
      )
-   ;; float32[5] _torque
+   ;; float32[6] _torque
    (dotimes (i (length _torque))
      (setf (elt _torque i) (sys::peek buf ptr- :float)) (incf ptr- 4)
      )
@@ -83,16 +83,16 @@
    self)
   )
 
-(setf (get ur3::data_msg :md5sum-) "ac56bf4dd0724c825f70fe60ce2d2cd1")
-(setf (get ur3::data_msg :datatype-) "ur3/data_msg")
-(setf (get ur3::data_msg :definition-)
-      "float32[5] pose
-float32[5] velocity
-float32[5] torque
+(setf (get ur3::arm_msg :md5sum-) "9a4d464236a1d2454f78317edb9a4f4e")
+(setf (get ur3::arm_msg :datatype-) "ur3/arm_msg")
+(setf (get ur3::arm_msg :definition-)
+      "float32[6] pose
+float32[6] velocity
+float32[6] torque
 ")
 
 
 
-(provide :ur3/data_msg "ac56bf4dd0724c825f70fe60ce2d2cd1")
+(provide :ur3/arm_msg "9a4d464236a1d2454f78317edb9a4f4e")
 
 

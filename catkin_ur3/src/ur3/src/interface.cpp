@@ -2,12 +2,7 @@
 // compilar : g++ open_socket.cpp socket_ur3_server.cpp -o server///////
 ////////////////////////////////////////////////////////////////////////
 #include "ros/ros.h"
-#include "ur3/join0.h"
-#include "ur3/join1.h"
-#include "ur3/join2.h"
-#include "ur3/join3.h"
-#include "ur3/join4.h"
-#include "ur3/join5.h"
+#include "ur3/arm_msg.h"
 #include <X11/keysymdef.h>
 #include <sys/socket.h>
 #include <stdlib.h> 
@@ -78,27 +73,17 @@ int main(int argc, char **argv){
 	ros::init(argc, argv, "talker");
 	ros::NodeHandle n;
 	//Declaração das publicões 
-	ros::Publisher join0_pub = n.advertise<ur3::join0>("join0", 0);
-	ros::Publisher join1_pub = n.advertise<ur3::join1>("join1", 0);
-	ros::Publisher join2_pub = n.advertise<ur3::join2>("join2", 0);
-	ros::Publisher join3_pub = n.advertise<ur3::join3>("join3", 0);
-	ros::Publisher join4_pub = n.advertise<ur3::join4>("join4", 0);
-	ros::Publisher join5_pub = n.advertise<ur3::join5>("join5", 0);
+	ros::Publisher arm_pub = n.advertise<ur3::arm_msg>("arm", 0);
 	ros::Rate loop_rate(125);
 	//Declaração das estruturas de dados para as publicações
-	ur3::join5 data_join0;
-	ur3::join5 data_join1;
-	ur3::join5 data_join2;
-	ur3::join5 data_join3;
-	ur3::join5 data_join4;
-	ur3::join5 data_join5;
-	
+	ur3::arm_msg arm;
+	//////////////////////////////////////////////////////////
     while (ros::ok()){
 
 		// data for join 5
-		data_join5.pose = pose_float;
-		data_join5.velocity = vel_float;
-		data_join5.torque = vel_float;
+		arm.pose[5] = pose_float*180/PI;
+		arm.velocity[5] = vel_float;
+		arm.torque[5] = torque_float;
 		//////////////////////////////
 
 		referencia = sin ((conta*PI)/180);
@@ -124,7 +109,8 @@ int main(int argc, char **argv){
 		tempo = tempo + 0.008;
 		conta = conta + 0.5;
 	
-		join5_pub.publish(data_join5);
+		//join5_pub.publish(data_join5);
+		arm_pub.publish(arm);
 		ros::spinOnce();
 		loop_rate.sleep();
 			
