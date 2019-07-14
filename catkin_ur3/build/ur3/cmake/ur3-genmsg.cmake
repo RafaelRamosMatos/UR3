@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "ur3: 1 messages, 0 services")
+message(STATUS "ur3: 6 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg")
 
@@ -17,9 +17,34 @@ add_custom_target(ur3_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg" NAME_WE)
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg" NAME_WE)
 add_custom_target(_ur3_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur3" "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur3" "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg" ""
+)
+
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg" NAME_WE)
+add_custom_target(_ur3_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur3" "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg" ""
+)
+
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg" NAME_WE)
+add_custom_target(_ur3_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur3" "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg" ""
+)
+
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg" NAME_WE)
+add_custom_target(_ur3_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur3" "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg" ""
+)
+
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg" NAME_WE)
+add_custom_target(_ur3_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur3" "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg" ""
+)
+
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg" NAME_WE)
+add_custom_target(_ur3_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur3" "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg" ""
 )
 
 #
@@ -29,7 +54,37 @@ add_custom_target(_ur3_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(ur3
-  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg"
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur3
+)
+_generate_msg_cpp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur3
+)
+_generate_msg_cpp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur3
+)
+_generate_msg_cpp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur3
+)
+_generate_msg_cpp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur3
+)
+_generate_msg_cpp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur3
@@ -49,7 +104,17 @@ add_custom_target(ur3_generate_messages_cpp
 add_dependencies(ur3_generate_messages ur3_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg" NAME_WE)
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_cpp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_cpp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_cpp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_cpp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_cpp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg" NAME_WE)
 add_dependencies(ur3_generate_messages_cpp _ur3_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -62,7 +127,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur3_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(ur3
-  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg"
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur3
+)
+_generate_msg_eus(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur3
+)
+_generate_msg_eus(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur3
+)
+_generate_msg_eus(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur3
+)
+_generate_msg_eus(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur3
+)
+_generate_msg_eus(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur3
@@ -82,7 +177,17 @@ add_custom_target(ur3_generate_messages_eus
 add_dependencies(ur3_generate_messages ur3_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg" NAME_WE)
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_eus _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_eus _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_eus _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_eus _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_eus _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg" NAME_WE)
 add_dependencies(ur3_generate_messages_eus _ur3_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -95,7 +200,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur3_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(ur3
-  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg"
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur3
+)
+_generate_msg_lisp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur3
+)
+_generate_msg_lisp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur3
+)
+_generate_msg_lisp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur3
+)
+_generate_msg_lisp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur3
+)
+_generate_msg_lisp(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur3
@@ -115,7 +250,17 @@ add_custom_target(ur3_generate_messages_lisp
 add_dependencies(ur3_generate_messages ur3_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg" NAME_WE)
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_lisp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_lisp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_lisp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_lisp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_lisp _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg" NAME_WE)
 add_dependencies(ur3_generate_messages_lisp _ur3_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -128,7 +273,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur3_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(ur3
-  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg"
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur3
+)
+_generate_msg_nodejs(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur3
+)
+_generate_msg_nodejs(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur3
+)
+_generate_msg_nodejs(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur3
+)
+_generate_msg_nodejs(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur3
+)
+_generate_msg_nodejs(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur3
@@ -148,7 +323,17 @@ add_custom_target(ur3_generate_messages_nodejs
 add_dependencies(ur3_generate_messages ur3_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg" NAME_WE)
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_nodejs _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_nodejs _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_nodejs _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_nodejs _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_nodejs _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg" NAME_WE)
 add_dependencies(ur3_generate_messages_nodejs _ur3_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -161,7 +346,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur3_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(ur3
-  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg"
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur3
+)
+_generate_msg_py(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur3
+)
+_generate_msg_py(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur3
+)
+_generate_msg_py(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur3
+)
+_generate_msg_py(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur3
+)
+_generate_msg_py(ur3
+  "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur3
@@ -181,7 +396,17 @@ add_custom_target(ur3_generate_messages_py
 add_dependencies(ur3_generate_messages ur3_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg" NAME_WE)
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_py _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_py _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_py _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_py _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg" NAME_WE)
+add_dependencies(ur3_generate_messages_py _ur3_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg" NAME_WE)
 add_dependencies(ur3_generate_messages_py _ur3_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

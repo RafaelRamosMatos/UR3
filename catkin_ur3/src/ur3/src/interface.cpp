@@ -2,19 +2,19 @@
 // compilar : g++ open_socket.cpp socket_ur3_server.cpp -o server///////
 ////////////////////////////////////////////////////////////////////////
 #include "ros/ros.h"
-#include "std_msgs/String.h"
-#include "ur3/data_msg.h"
+#include "ur3/join0.h"
+#include "ur3/join1.h"
+#include "ur3/join2.h"
+#include "ur3/join3.h"
+#include "ur3/join4.h"
+#include "ur3/join5.h"
 #include <X11/keysymdef.h>
 #include <sys/socket.h>
 #include <stdlib.h> 
 #include <netinet/in.h> 
 #include <iostream>
 #include <stdio.h>   
-#include <string.h> 
-#include <unistd.h>  
-#include <fcntl.h>   
-#include <errno.h>   
-#include <termios.h> 
+#include <string.h>  
 #include <string> 
 #include <stdlib.h>
 #include <sstream>
@@ -77,17 +77,29 @@ int main(int argc, char **argv){
 	//ROS 
 	ros::init(argc, argv, "talker");
 	ros::NodeHandle n;
-	//ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
-	ros::Publisher data_msg_pub = n.advertise<ur3::data_msg>("Data", 0);
+	//Declaração das publicões 
+	ros::Publisher join0_pub = n.advertise<ur3::join0>("join0", 0);
+	ros::Publisher join1_pub = n.advertise<ur3::join1>("join1", 0);
+	ros::Publisher join2_pub = n.advertise<ur3::join2>("join2", 0);
+	ros::Publisher join3_pub = n.advertise<ur3::join3>("join3", 0);
+	ros::Publisher join4_pub = n.advertise<ur3::join4>("join4", 0);
+	ros::Publisher join5_pub = n.advertise<ur3::join5>("join5", 0);
 	ros::Rate loop_rate(125);
-	//tic();
-	///////////////////////
-	ur3::data_msg data;
+	//Declaração das estruturas de dados para as publicações
+	ur3::join5 data_join0;
+	ur3::join5 data_join1;
+	ur3::join5 data_join2;
+	ur3::join5 data_join3;
+	ur3::join5 data_join4;
+	ur3::join5 data_join5;
 	
     while (ros::ok()){
-		data.pose = pose_float;
-		data.velocity = vel_float;
-		data.torque = vel_float;
+
+		// data for join 5
+		data_join5.pose = pose_float;
+		data_join5.velocity = vel_float;
+		data_join5.torque = vel_float;
+		//////////////////////////////
 
 		referencia = sin ((conta*PI)/180);
 		buffer_in = (int)(referencia*norma_float);
@@ -112,7 +124,7 @@ int main(int argc, char **argv){
 		tempo = tempo + 0.008;
 		conta = conta + 0.5;
 	
-		data_msg_pub.publish(data);
+		join5_pub.publish(data_join5);
 		ros::spinOnce();
 		loop_rate.sleep();
 			

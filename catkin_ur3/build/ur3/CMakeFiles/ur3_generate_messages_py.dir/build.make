@@ -53,22 +53,62 @@ CMAKE_BINARY_DIR = /home/rafael/UR3/catkin_ur3/build
 # Include the progress variables for this target.
 include ur3/CMakeFiles/ur3_generate_messages_py.dir/progress.make
 
-ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_data_msg.py
+ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join5.py
+ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join4.py
+ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join0.py
+ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join3.py
+ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join1.py
+ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join2.py
 ur3/CMakeFiles/ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py
 
 
-/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_data_msg.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_data_msg.py: /home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG ur3/data_msg"
-	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/data_msg.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join5.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join5.py: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG ur3/join5"
+	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join5.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg
+
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join4.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join4.py: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG ur3/join4"
+	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join4.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg
+
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join0.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join0.py: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG ur3/join0"
+	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join0.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg
+
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join3.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join3.py: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG ur3/join3"
+	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join3.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg
+
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join1.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join1.py: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG ur3/join1"
+	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join1.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg
+
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join2.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join2.py: /home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python from MSG ur3/join2"
+	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rafael/UR3/catkin_ur3/src/ur3/msg/join2.msg -Iur3:/home/rafael/UR3/catkin_ur3/src/ur3/msg -p ur3 -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg
 
 /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_data_msg.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for ur3"
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join5.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join4.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join0.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join3.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join1.py
+/home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join2.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python msg __init__.py for ur3"
 	cd /home/rafael/UR3/catkin_ur3/build/ur3 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg --initpy
 
 ur3_generate_messages_py: ur3/CMakeFiles/ur3_generate_messages_py
-ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_data_msg.py
+ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join5.py
+ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join4.py
+ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join0.py
+ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join3.py
+ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join1.py
+ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/_join2.py
 ur3_generate_messages_py: /home/rafael/UR3/catkin_ur3/devel/lib/python2.7/dist-packages/ur3/msg/__init__.py
 ur3_generate_messages_py: ur3/CMakeFiles/ur3_generate_messages_py.dir/build.make
 
