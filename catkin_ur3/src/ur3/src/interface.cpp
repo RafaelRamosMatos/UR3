@@ -73,7 +73,7 @@ int main(int argc, char **argv){
 	ros::init(argc, argv, "talker");
 	ros::NodeHandle n;
 	//Declaração das publicões 
-	ros::Publisher arm_pub = n.advertise<ur3::arm_msg>("arm", 0);
+	ros::Publisher arm_pub = n.advertise<ur3::arm_msg>("arm",0);
 	ros::Rate loop_rate(125);
 	//Declaração das estruturas de dados para as publicações
 	ur3::arm_msg arm;
@@ -86,22 +86,25 @@ int main(int argc, char **argv){
 		arm.torque[5] = torque_float;
 		//////////////////////////////
 
-		referencia = sin ((conta*PI)/180);
+		referencia = 3*sin ((conta*PI)/180);
 		buffer_in = (int)(referencia*norma_float);
 		buffer_in = converter(buffer_in);
 		send(new_socket, &buffer_in, sizeof buffer_in, 0);
     	recv(new_socket, &buffer_out, sizeof buffer_out, 0);
 
-		memcpy(&vel_int32, &buffer_out[0], sizeof(int32_t));
-		memcpy(&pose_int32, &buffer_out[4], sizeof(int32_t));
-		memcpy(&torque_int32, &buffer_out[8], sizeof(int32_t));
+		//memcpy(&pose_int32, &buffer_out[0], sizeof(int32_t));
+		//memcpy(&vel_int32, &buffer_out[4], sizeof(int32_t));
+		//memcpy(&torque_int32, &buffer_out[8], sizeof(int32_t));
+		memcpy(&pose_int32, &buffer_out[60], sizeof(int32_t));
+		memcpy(&vel_int32, &buffer_out[64], sizeof(int32_t));
+		memcpy(&torque_int32, &buffer_out[68], sizeof(int32_t));
 
-		vel_int32 = converter(vel_int32);
 		pose_int32 = converter(pose_int32);
+		vel_int32 = converter(vel_int32);
 		torque_int32 = converter(torque_int32);
 
-		vel_float = ((double)vel_int32)/norma_float;
 		pose_float = ((double)pose_int32)/norma_float;
+		vel_float = ((double)vel_int32)/norma_float;
 		torque_float = ((double)torque_int32)/norma_float;
 		fprintf(fp, "\n%10.5f, %10.5f, %10.5f, %10.5f, %10.5f", tempo, referencia, vel_float,
 			 pose_float, torque_float);
