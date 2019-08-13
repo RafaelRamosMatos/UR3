@@ -18,12 +18,14 @@
 #include <ctime>
 #include "open_socket.h"
 #include "send_script.h"
+#include "reverse_word.h"
+#include "join_data.h"
 
 #define PORT 5000
 #define PI 3.1415
 float referencia = 0;
 /// little endian <-> big endian ///////
-int converter(int32_t num){
+ int reverse(int32_t num){
 	uint32_t b0,b1,b2,b3;
 	uint32_t res;
 	b0 = (num & 0x000000ff) << 24u;
@@ -36,6 +38,7 @@ int converter(int32_t num){
 ///////////////////////////////////////
 
 int main(int argc, char **argv){ 
+	float* data_join_out;
 	// primeira coisa:
 	// tem que enviar o arquivo urscript
 	send_script(); // a função send_script envia o arquivo para o robô
@@ -46,7 +49,7 @@ int main(int argc, char **argv){
 	////////////////////////////////////
 	// Declaração dos buffers de entrada e saida 
     int32_t buffer_in  = 0;
-	int8_t buffer_out[127]; 
+	int8_t buffer_out[72]; 
    	/////////////////////////////
 	// criação de um arquivo .csv para armazenar os dados
 	FILE *fp;
@@ -79,33 +82,43 @@ int main(int argc, char **argv){
 	ur3::arm_msg arm;
 	//////////////////////////////////////////////////////////
     while (ros::ok()){
-
-		// data for join 5
-		arm.pose[5] = pose_float*180/PI;
-		arm.velocity[5] = vel_float;
-		arm.torque[5] = torque_float;
-		//////////////////////////////
-
-		referencia = 3*sin ((conta*PI)/180);
+		/////////////////////////////////////////////////////
+		referencia = 1*sin ((conta*PI)/180);
 		buffer_in = (int)(referencia*norma_float);
-		buffer_in = converter(buffer_in);
+		buffer_in = reverse(buffer_in);
 		send(new_socket, &buffer_in, sizeof buffer_in, 0);
     	recv(new_socket, &buffer_out, sizeof buffer_out, 0);
-
-		//memcpy(&pose_int32, &buffer_out[0], sizeof(int32_t));
-		//memcpy(&vel_int32, &buffer_out[4], sizeof(int32_t));
-		//memcpy(&torque_int32, &buffer_out[8], sizeof(int32_t));
-		memcpy(&pose_int32, &buffer_out[60], sizeof(int32_t));
-		memcpy(&vel_int32, &buffer_out[64], sizeof(int32_t));
-		memcpy(&torque_int32, &buffer_out[68], sizeof(int32_t));
-
-		pose_int32 = converter(pose_int32);
-		vel_int32 = converter(vel_int32);
-		torque_int32 = converter(torque_int32);
-
-		pose_float = ((double)pose_int32)/norma_float;
-		vel_float = ((double)vel_int32)/norma_float;
-		torque_float = ((double)torque_int32)/norma_float;
+		/////////////////////////////////////////////////////
+		data_join_out = join_data(buffer_out);
+		/////////////////////////////////////////////////
+		pose_float = data_join_out[0];
+		vel_float = data_join_out[1];
+		torque_float = data_join_out[2];
+		/////////////////////////////////////////
+		arm.pose[5] = data_join_out[15];
+		arm.velocity[5] = data_join_out[16];
+		arm.torque[5] = data_join_out[17];
+		///////////////////////////////////////
+		arm.pose[4] = data_join_out[12];
+		arm.velocity[4] = data_join_out[13];
+		arm.torque[4] = data_join_out[14];
+		///////////////////////////////////////
+		arm.pose[3] = data_join_out[9];
+		arm.velocity[3] = data_join_out[10];
+		arm.torque[3] = data_join_out[11];
+		////////////////////////////////////////
+		arm.pose[2] = data_join_out[6];
+		arm.velocity[2] = data_join_out[7];
+		arm.torque[2] = data_join_out[8];
+		//////////////////////////////////////
+		arm.pose[1] = data_join_out[3];
+		arm.velocity[1] = data_join_out[4];
+		arm.torque[1] = data_join_out[5];
+		//////////////////////////////////////
+		arm.pose[0] = data_join_out[0];
+		arm.velocity[0] = data_join_out[1];
+		arm.torque[0] = data_join_out[2];
+		//////////////////////////////////////
 		fprintf(fp, "\n%10.5f, %10.5f, %10.5f, %10.5f, %10.5f", tempo, referencia, vel_float,
 			 pose_float, torque_float);
 		//printf("\n%f, %f, %f\n", vel_float, pose_float, torque_float);
@@ -115,8 +128,7 @@ int main(int argc, char **argv){
 		//join5_pub.publish(data_join5);
 		arm_pub.publish(arm);
 		ros::spinOnce();
-		loop_rate.sleep();
-			
+		loop_rate.sleep();		
 	}
 	fclose(fp);
 	return 0;

@@ -649,6 +649,32 @@ send_script/fast:
 .PHONY : send_script/fast
 
 #=============================================================================
+# Target rules for targets named join_data
+
+# Build rule for target.
+join_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 join_data
+.PHONY : join_data
+
+# fast build rule for target.
+join_data/fast:
+	$(MAKE) -f ur3/CMakeFiles/join_data.dir/build.make ur3/CMakeFiles/join_data.dir/build
+.PHONY : join_data/fast
+
+#=============================================================================
+# Target rules for targets named reverse_word
+
+# Build rule for target.
+reverse_word: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reverse_word
+.PHONY : reverse_word
+
+# fast build rule for target.
+reverse_word/fast:
+	$(MAKE) -f ur3/CMakeFiles/reverse_word.dir/build.make ur3/CMakeFiles/reverse_word.dir/build
+.PHONY : reverse_word/fast
+
+#=============================================================================
 # Target rules for targets named interface
 
 # Build rule for target.
@@ -724,6 +750,8 @@ help:
 	@echo "... ur3_genpy"
 	@echo "... open_socket"
 	@echo "... send_script"
+	@echo "... join_data"
+	@echo "... reverse_word"
 	@echo "... interface"
 	@echo "... roscpp_generate_messages_cpp"
 .PHONY : help
