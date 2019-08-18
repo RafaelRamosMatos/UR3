@@ -7,6 +7,7 @@ ur3/CMakeFiles/interface.dir/src/interface.cpp.o
  /home/rafael/UR3/catkin_ur3/src/ur3/include/ur3/reverse_word.h
  /home/rafael/UR3/catkin_ur3/src/ur3/include/ur3/send_script.h
  /home/rafael/UR3/catkin_ur3/src/ur3/src/interface.cpp
+ /opt/ros/melodic/include/control_msgs/GripperCommand.h
  /opt/ros/melodic/include/ros/advertise_options.h
  /opt/ros/melodic/include/ros/advertise_service_options.h
  /opt/ros/melodic/include/ros/assert.h

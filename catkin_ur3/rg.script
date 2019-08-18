@@ -287,7 +287,7 @@ def unnamed():
 	end
 
   	thread rg2_thrd()
-	   RG2(0,4,0.0,True,False,False) 
+	   RG2(90,4,0.0,True,False,False) 
 	end
 
 	
@@ -295,7 +295,7 @@ def unnamed():
 	thrd_grip = run ler_garra()
 	while True:
 		speedj([v_join[1]/2,v_join[2]/2,v_join[3]/2,v_join[4],v_join[5],v_join[6]], 100, 0.001) 
-		#RG2(0,4,0.0,True,False,False) 
+		RG2(90,4,0.0,True,False,False) 
 	end
 	#speedj([0,0,0,0,0,0], 0.5, 5)
 	

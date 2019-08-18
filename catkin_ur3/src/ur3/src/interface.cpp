@@ -4,6 +4,7 @@
 #include "ros/ros.h"
 #include "sensor_msgs/JointState.h"
 #include "sensor_msgs/Joy.h"
+#include "control_msgs/GripperCommand.h"
 #include <X11/keysymdef.h>
 #include <sys/socket.h>
 #include <stdlib.h> 
@@ -64,7 +65,7 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& joy_data){
 
 int main(int argc, char **argv){ 
 	refe[0] = 0; refe[1] = 0; refe[2] = 0; refe[3] = 0; refe[4] = 0;
-	refe[5] = 0; refe[5] = 0;
+	refe[5] = 0; refe[6] = 0; refe[7] = 0; refe[8] = 0;
 	float* data_join_out;
 	// primeira coisa:
 	// tem que enviar o arquivo urscript
@@ -75,8 +76,8 @@ int main(int argc, char **argv){
 	new_socket = open_socket();
 	////////////////////////////////////
 	// Declaração dos buffers de entrada e saida 
-    int32_t buffer_in  = 0;
-	int32_t buffer_in_[2];
+    //int32_t buffer_in  = 0;
+	int32_t buffer_in_[8];
 	int8_t buffer_out[2024]; 
 	float tempo = 0;
    	/////////////////////////////
@@ -87,15 +88,15 @@ int main(int argc, char **argv){
 	fprintf(fp,"     t     ,   pj0    ,    vj0    ,    tj0    ,    pj1    ,    vj1    ,    tj1    ,    pj2    ,    vj2    ,    tj2    ,    pj3    ,    vj3    ,    tj3    ,    pj4    ,    vj4    ,    tj4    ,    pj5    ,    vj5    ,    tj5    \n");
     // fprintf(fp,"     t     ,   pj0    \n");
 	//////////////////////
-	double vel_float = 0;
-	int32_t vel_int32 = 0;
-	int64_t vel_int64 = 0;
+	//double vel_float = 0;
+	//int32_t vel_int32 = 0;
+	//int64_t vel_int64 = 0;
 	//////////////////////
-	double pose_float = 0;
-	int32_t pose_int32 = 0;
+	//double pose_float = 0;
+	//int32_t pose_int32 = 0;
 	/////////////////////
-	double torque_float = 0;
-	int32_t torque_int32 = 0;
+	//double torque_float = 0;
+	//int32_t torque_int32 = 0;
 	/////////////////////
 	float norma_float = 1000000.0;
 	
@@ -106,10 +107,14 @@ int main(int argc, char **argv){
 	ros::NodeHandle n;
 	//Declaração das publicões 
 	ros::Publisher arm_pub = n.advertise<sensor_msgs::JointState>("arm",0);
+	ros::Publisher gripper_pub = n.advertise<control_msgs::GripperCommand>("gripper",0);
 	ros::Subscriber sub_joy = n.subscribe("joy", 10, joyCallback);
 	ros::Rate loop_rate(55);
 	//Declaração das estruturas de dados para as publicações
 	sensor_msgs::JointState arm;
+	control_msgs::GripperCommand gripper;
+	gripper.position = 0;
+	gripper.max_effort = 0;
 	arm.header.frame_id = " ";
 	arm.name.resize(6);
 	arm.position.resize(6);
@@ -122,13 +127,11 @@ int main(int argc, char **argv){
 	arm.name[4] = "Wrist 2";
 	arm.name[5] = "Wrist 3";
 	
-	int number = 0;
+	//int number = 0;
 	
 	//////////////////////////////////////////////////////////
     while (ros::ok()){
 		/////////////////////////////////////////////////////
-		// arm.header.seq = con
-		//referencia = refe[0]; //1*sin ((conta*PI)/180);
 		buffer_in_[0] = (int)(refe[0]*norma_float);
 		buffer_in_[0] = reverse(buffer_in_[0]);
 		buffer_in_[1] = (int)(refe[1]*norma_float);
@@ -141,10 +144,12 @@ int main(int argc, char **argv){
 		buffer_in_[4] = reverse(buffer_in_[4]);
 		buffer_in_[5] = (int)(refe[5]*norma_float);
 		buffer_in_[5] = reverse(buffer_in_[5]);
-		send(new_socket, buffer_in_, 24, 0);
-		//buffer_in = (int)(referencia*norma_float);
-		//buffer_in = reverse(buffer_in);
-		//send(new_socket, &buffer_in, sizeof buffer_in, 0);
+		buffer_in_[6] = (int)(refe[6]*norma_float);
+		buffer_in_[6] = reverse(buffer_in_[6]);
+		buffer_in_[7] = (int)(refe[7]*norma_float);
+		buffer_in_[7] = reverse(buffer_in_[7]);
+		send(new_socket, buffer_in_, 32, 0);
+		/////////////////////////////////////////////////////////
 		number = 0;
 		///////////////////////////////////////////////////////////
 		number = recv(new_socket, &buffer_out, 128, 0);
@@ -184,6 +189,7 @@ int main(int argc, char **argv){
 		
 		arm.header.stamp = ros::Time::now();
 		arm_pub.publish(arm);
+		gripper_pub.publish(gripper);
 		ros::spinOnce();
 		loop_rate.sleep();		
 		
