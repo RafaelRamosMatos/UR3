@@ -286,12 +286,9 @@ def unnamed():
 		movej([0, -1.570796, 0,-1.570796, 0, 0],1.4, 1.05)
 	end
 
-  	thread rg2_thrd()
-	   RG2(0,4,0.0,True,False,False) 
-	end
-
+  
 	
-	thrd_rg2 = run rg2_thrd() 
+	
 	thrd_grip = run ler_garra()
 	while True:
 		speedj([v_join[1]/2,v_join[2]/2,v_join[3]/2,v_join[4],v_join[5],v_join[6]], 100, 0.001) 
