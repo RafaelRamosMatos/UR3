@@ -1,5 +1,5 @@
 // Programa para teste na junta 5 do ur3////////////////////////////////
-// compilar : g++ open_socket.cpp socket_ur3_server.cpp -o server///////
+
 ////////////////////////////////////////////////////////////////////////
 #include "ros/ros.h"
 #include "sensor_msgs/JointState.h"

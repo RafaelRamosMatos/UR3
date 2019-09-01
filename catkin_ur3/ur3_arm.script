@@ -40,9 +40,8 @@ def unnamed():
   
     thread rg2_thrd():
 		target_width = 40
+		x = 0
 		while True:
-			
-			
 			target_force = 10
 			if target_width > 100:
 				target_width = 100
@@ -73,7 +72,11 @@ def unnamed():
 				target_width = largura
 			end
 		
-			def bit(input):
+			def bit(x_width, x_force):
+				x_width=x_width+10
+				input=floor(x_width)*4
+				input=input+floor(x_force/2)*4*111
+				input=input+32768
 				msb=65536
 				local i=0
 				local output=0
@@ -89,26 +92,39 @@ def unnamed():
 					set_digital_out(8,False)
 					sleep(0.008)
 					input=input*2
-					i=i+1
-						
+					i=i+1		
 				end
-				while (gripper[1] == 1) and (gripper[2] == 0):
-					sleep(0.1)
-				end
-				while (gripper[1] == 0) and (gripper[2] == 1):
-					sleep(0.1)
-				end
-				if (gripper[1] == 0) and (gripper[2] == 0):
-					sleep(0.3)
-				end
+				sleep(0.01)
 			end
-			target_width=target_width+10
-			rg_data=floor(target_width)*4
-			rg_data=rg_data+floor(target_force/2)*4*111
-			rg_data=rg_data+32768
-
-			bit(rg_data)
-			#sleep(2)
+			
+			bit(target_width, target_force)
+			
+			while (gripper[1] == 1) and (gripper[2] == 0):
+					sleep(0.05)
+			end
+			
+			while (gripper[1] == 0) and (gripper[2] == 1):
+				sleep(0.05)
+			end
+			if (gripper[1] == 0) and (gripper[2] == 0):
+				target_width = largura
+				#target_force = 10
+			end
+			while(gripper[1]  > 1) or (gripper[1] < 0):
+				sleep(0.05)		
+			end
+			while(gripper[2]  > 1) or (gripper[2] < 0):
+				sleep(0.05)		
+			end
+			while(gripper[1] == 1) and (gripper[2] == 1):
+				sleep(0.1)	
+				target_width = largura
+				#target_force = 10	
+			end
+			bit(target_width, target_force)
+			while(gripper[1] == 0) and (gripper[2] == 0):
+				sleep(0.05)		
+			end
 			sleep(0.008)
 			sync()
 		end
@@ -195,6 +211,6 @@ def unnamed():
 	thrd_rg2 = run rg2_thrd() 
 	thrd_grip = run ler_garra()
 	while True:
-		speedj([velocity[1]/2,velocity[2]/2,velocity[3]/2,velocity[4]/2,velocity[5]/2,velocity[6]/2], 1, 0.001)
+		speedj([velocity[1]/2,velocity[2]/2,velocity[3]/2,velocity[4]/2,velocity[5]/2,velocity[6]/2], 2, 0.001)
 	end
 end
