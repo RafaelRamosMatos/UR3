@@ -244,6 +244,7 @@ interface_EXTERNAL_OBJECTS =
 /home/rafael/UR3/catkin_ur3/devel/lib/ur3/interface: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/rafael/UR3/catkin_ur3/devel/lib/ur3/interface: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/rafael/UR3/catkin_ur3/devel/lib/ur3/interface: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/rafael/UR3/catkin_ur3/devel/lib/ur3/interface: /usr/lib/x86_64-linux-gnu/libzmq.so
 /home/rafael/UR3/catkin_ur3/devel/lib/ur3/interface: ur3/CMakeFiles/interface.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable /home/rafael/UR3/catkin_ur3/devel/lib/ur3/interface"
 	cd /home/rafael/UR3/catkin_ur3/build/ur3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/interface.dir/link.txt --verbose=$(VERBOSE)

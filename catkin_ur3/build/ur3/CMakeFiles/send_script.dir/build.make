@@ -90,6 +90,7 @@ send_script_EXTERNAL_OBJECTS =
 
 /home/rafael/UR3/catkin_ur3/devel/lib/libsend_script.so: ur3/CMakeFiles/send_script.dir/src/send_script.cpp.o
 /home/rafael/UR3/catkin_ur3/devel/lib/libsend_script.so: ur3/CMakeFiles/send_script.dir/build.make
+/home/rafael/UR3/catkin_ur3/devel/lib/libsend_script.so: /usr/lib/x86_64-linux-gnu/libzmq.so
 /home/rafael/UR3/catkin_ur3/devel/lib/libsend_script.so: ur3/CMakeFiles/send_script.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/rafael/UR3/catkin_ur3/devel/lib/libsend_script.so"
 	cd /home/rafael/UR3/catkin_ur3/build/ur3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/send_script.dir/link.txt --verbose=$(VERBOSE)

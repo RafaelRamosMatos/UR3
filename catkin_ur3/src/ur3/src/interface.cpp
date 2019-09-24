@@ -31,7 +31,8 @@
 #include "reverse_word.h"
 #include "join_data.h"
 #include "read_data.h"
-
+#include <zmq.h>
+#include <unistd.h>
 
 float referencia = 0;
 float refe[8];
@@ -91,10 +92,10 @@ int main(int argc, char **argv){
 	int new_socket = open_socket();;
 	// abrindo a comunicaçção tcp socket
 	////////////////////////////////////
-		// void *context = zmq_ctx_new ();
-		// void *responder = zmq_socket (context, ZMQ_REP);
-		// int rc = zmq_bind (responder, "tcp://*:5000");
-		// assert (rc == 0);
+		//  void *context = zmq_ctx_new ();
+		//  void *responder = zmq_socket (context, ZMQ_REP);
+		//  int rc = zmq_bind (responder, "tcp://*:60200");
+		//  assert (rc == 0);
 	///////////////////////////////////////////
 	// Declaração dos buffers de entrada e saida 
    
@@ -123,7 +124,7 @@ int main(int argc, char **argv){
 	//ros::Publisher gripper_pub = n.advertise<control_msgs::GripperCommand>("gripper",0);
 	///////////////////////////////////////////////////////////////////////////////////
 	ros::Subscriber sub_joy = n.subscribe("joy", 10, joyCallback);
-	ros::Rate loop_rate(50);
+	ros::Rate loop_rate(100);
 	//Declaração das estruturas de dados para as publicações
 	sensor_msgs::JointState arm;
 	ur3::end_Effector_msg end_effector;
@@ -179,12 +180,12 @@ int main(int argc, char **argv){
 		buffer_in_[7] = (int)(refe[7]*norma_float);
 		buffer_in_[7] = reverse(buffer_in_[7]);
 		send(new_socket, buffer_in_, 32, 0);
-		//zmq_send (responder, buffer_in_, 32, 0);
+		// zmq_send (responder, buffer_in_, 32, 0);
 		/////////////////////////////////////////////////////////
 		
 		////////*///////////////////////////////////////////////////
-		recv(new_socket, &buffer_out, 256, 0);
-		//zmq_recv (responder, buffer_out, 256, 0);
+	    recv(new_socket, &buffer_out, 256, 0);
+		// zmq_recv (responder, buffer_out, 256, 0);
 		
 		/////////////////////////////////////////////////////
 		data_join_out = join_data(buffer_out);
@@ -253,7 +254,7 @@ int main(int argc, char **argv){
 		//////////////////////////////////////
 		fprintf(fp, "\n%10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f", tempo,data_join_out[39], data_join_out[0], data_join_out[1], data_join_out[2], data_join_out[3], data_join_out[4], data_join_out[5], data_join_out[6], data_join_out[7], data_join_out[8], data_join_out[9], data_join_out[10], data_join_out[11], data_join_out[12], data_join_out[13], data_join_out[14], data_join_out[15], data_join_out[16], data_join_out[17]);
 		//fprintf(fp, "\n%10.5f, %10.5f", tempo, data_join_out[0]);
-		tempo = tempo + 0.008;
+		tempo = tempo + 0.001;
 		
 		arm.header.stamp = ros::Time::now();
 		end_effector.header.stamp = ros::Time::now();

@@ -60,3 +60,7 @@
 
 >> Próxinos dias será estudado como é feita sua implementação em C para ser anexado ao codigo da interface.
 
+
+## __23-09-2019__
+>> Hoje foi feito um teste para averiguar se o gargalo da comunicação estava acontecendo no rotiador. O resultado é que 64 bytes leva 1ms p ser enviado.
+ 

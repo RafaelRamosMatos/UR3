@@ -197,6 +197,10 @@ join_data.h
 /home/rafael/UR3/catkin_ur3/src/ur3/src/join_data.h
 read_data.h
 /home/rafael/UR3/catkin_ur3/src/ur3/src/read_data.h
+zmq.h
+-
+unistd.h
+-
 
 /home/rafael/UR3/catkin_ur3/src/ur3/src/join_data.cpp
 X11/keysymdef.h
@@ -328,6 +332,8 @@ ctime
 errno.h
 -
 arpa/inet.h
+-
+zmq.h
 -
 
 /opt/ros/melodic/include/control_msgs/GripperCommand.h

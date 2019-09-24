@@ -9,7 +9,7 @@
 #include <ctime>
 #include <errno.h>
 #include <arpa/inet.h>
-
+#include <zmq.h> 
 int send_script(){
 
     int sfd =0, n=0, b;
@@ -30,6 +30,13 @@ int send_script(){
         perror("Connect");
         return 1;
     }
+
+    // char sendbuffer[100];
+    // void *context = zmq_ctx_new ();
+    // void *requester = zmq_socket (context, ZMQ_PUB);
+    // int b = zmq_connect (requester, "tcp://localhost:5000"); // localhost = "192.168.1.56"
+        
+
     // resetar o robô
     FILE *fp1 = fopen("prog_reset.script", "rb");
     if(fp1 == NULL){
@@ -37,8 +44,11 @@ int send_script(){
         return 2;
     }
 
-     while( (b = fread(sendbuffer, 1, sizeof(sendbuffer), fp1))>0 ){
-        send(sfd, sendbuffer, b, 0);
+    while( (b = fread(sendbuffer, 1, sizeof(sendbuffer), fp1))>0 ){
+      send(sfd, sendbuffer, b, 0);
+        // printf("%i\n",b);
+        // zmq_send (requester, sendbuffer, b, 0);
+        // printf("ok1\n");
     }
 
     fclose(fp1);
@@ -52,6 +62,8 @@ int send_script(){
 
     while( (b = fread(sendbuffer, 1, sizeof(sendbuffer), fp))>0 ){
         send(sfd, sendbuffer, b, 0);
+        // zmq_send (requester, sendbuffer, b, 0);
+        // printf("%i\n",b);
     }
 
     fclose(fp);
