@@ -63,4 +63,16 @@
 
 ## __23-09-2019__
 >> Hoje foi feito um teste para averiguar se o gargalo da comunicação estava acontecendo no rotiador. O resultado é que 64 bytes leva 1ms p ser enviado.
+
+
+ ## __24-09-2019__
+ >> A bibliotéca zmq.h não funcionou. O robô não entende as mensagens enviadas pelo computador.
+
+ ## __25-09-2019__
+ >> um solução que aumentou o taxa de amostragem para 100hz foi tirar algumas partes de códico do loop do ros. 
  
+ >> A parte de escrever dados foi retirada. Agora o os dados são inscritos usando o comando rosbag record /arm /end_effector /ref.
+
+ >> Proximos dias o envio de dados será feito por um thread fora do loop dos ros.
+
+## __FIM__ 

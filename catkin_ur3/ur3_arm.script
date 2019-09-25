@@ -219,7 +219,7 @@ def unnamed():
 	thrd_rg2 = run rg2_thrd() 
 	thrd_grip = run ler_garra()
 	while True:
-		speedj([velocity[1],velocity[2],velocity[3],velocity[4],velocity[5],velocity[6]], 2, 0.001)
+		speedj([velocity[1],velocity[2],velocity[3],velocity[4],velocity[5],velocity[6]], 5, 0.001)
 		
 	end
 end

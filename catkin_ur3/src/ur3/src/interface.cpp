@@ -104,10 +104,10 @@ int main(int argc, char **argv){
 	float tempo = 0;
    	/////////////////////////////
 	// criação de um arquivo .csv para armazenar os dados
-	FILE *fp;
-    char filename[20]= "dados.csv";
-	fp=fopen(filename,"w+");
-	fprintf(fp,"     t     ,   ref   ,   pj0    ,    vj0    ,    tj0    ,    pj1    ,    vj1    ,    tj1    ,    pj2    ,    vj2    ,    tj2    ,    pj3    ,    vj3    ,    tj3    ,    pj4    ,    vj4    ,    tj4    ,    pj5    ,    vj5    ,    tj5    \n");
+	// FILE *fp;
+    // char filename[20]= "dados.csv";
+	// fp=fopen(filename,"w+");
+	// fprintf(fp,"     t     ,   ref   ,   pj0    ,    vj0    ,    tj0    ,    pj1    ,    vj1    ,    tj1    ,    pj2    ,    vj2    ,    tj2    ,    pj3    ,    vj3    ,    tj3    ,    pj4    ,    vj4    ,    tj4    ,    pj5    ,    vj5    ,    tj5    \n");
 	//////////////////////
 	/////////////////////
 	float norma_float = 1000000.0;
@@ -118,9 +118,9 @@ int main(int argc, char **argv){
 	ros::init(argc, argv, "ur3");
 	ros::NodeHandle n;
 	//Declaração das publicões 
-	ros::Publisher arm_pub = n.advertise<sensor_msgs::JointState>("arm",10);
-	ros::Publisher ref_pub = n.advertise<std_msgs::Float32>("ref",10);
-	ros::Publisher end_Effector_pub = n.advertise<ur3::end_Effector_msg>("end_effector",0);
+	ros::Publisher arm_pub = n.advertise<sensor_msgs::JointState>("arm",50);
+	ros::Publisher ref_pub = n.advertise<std_msgs::Float32>("ref",50);
+	ros::Publisher end_Effector_pub = n.advertise<ur3::end_Effector_msg>("end_effector",50);
 	//ros::Publisher gripper_pub = n.advertise<control_msgs::GripperCommand>("gripper",0);
 	///////////////////////////////////////////////////////////////////////////////////
 	ros::Subscriber sub_joy = n.subscribe("joy", 10, joyCallback);
@@ -252,9 +252,9 @@ int main(int argc, char **argv){
 		arm.velocity[0] = data_join_out[1];
 		arm.effort[0] = data_join_out[2];
 		//////////////////////////////////////
-		fprintf(fp, "\n%10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f", tempo,data_join_out[39], data_join_out[0], data_join_out[1], data_join_out[2], data_join_out[3], data_join_out[4], data_join_out[5], data_join_out[6], data_join_out[7], data_join_out[8], data_join_out[9], data_join_out[10], data_join_out[11], data_join_out[12], data_join_out[13], data_join_out[14], data_join_out[15], data_join_out[16], data_join_out[17]);
+		//fprintf(fp, "\n%10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f, %10.5f", tempo,data_join_out[39], data_join_out[0], data_join_out[1], data_join_out[2], data_join_out[3], data_join_out[4], data_join_out[5], data_join_out[6], data_join_out[7], data_join_out[8], data_join_out[9], data_join_out[10], data_join_out[11], data_join_out[12], data_join_out[13], data_join_out[14], data_join_out[15], data_join_out[16], data_join_out[17]);
 		//fprintf(fp, "\n%10.5f, %10.5f", tempo, data_join_out[0]);
-		tempo = tempo + 0.001;
+		tempo = tempo + 0.01;
 		
 		arm.header.stamp = ros::Time::now();
 		end_effector.header.stamp = ros::Time::now();

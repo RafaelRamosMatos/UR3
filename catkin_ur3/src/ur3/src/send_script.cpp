@@ -46,9 +46,7 @@ int send_script(){
 
     while( (b = fread(sendbuffer, 1, sizeof(sendbuffer), fp1))>0 ){
       send(sfd, sendbuffer, b, 0);
-        // printf("%i\n",b);
-        // zmq_send (requester, sendbuffer, b, 0);
-        // printf("ok1\n");
+    
     }
 
     fclose(fp1);
