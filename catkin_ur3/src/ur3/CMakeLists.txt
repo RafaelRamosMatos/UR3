@@ -230,14 +230,11 @@ install(FILES src/send_script.h DESTINATION include)
 install(TARGETS join_data DESTINATION lib)
 install(FILES src/join_data.h DESTINATION include)
 
-install(TARGETS reverse_word DESTINATION lib)
-install(FILES src/reverse_word.h DESTINATION include)
+
 
 install(TARGETS read_data DESTINATION lib)
 install(FILES src/read_data.h DESTINATION include)
 
 add_executable(interface src/interface.cpp src/open_socket.cpp src/send_script.cpp 
-src/join_data.cpp src/reverse_word.cpp src/read_data.cpp)
-target_link_libraries(interface open_socket send_script join_data reverse_word read_data ${catkin_LIBRARIES})
-target_link_libraries(send_script PUBLIC ${ZeroMQ_LIBRARY})
-target_link_libraries(interface PUBLIC ${ZeroMQ_LIBRARY})
+src/join_data.cpp src/read_data.cpp)
+target_link_libraries(interface open_socket send_script join_data read_data ${catkin_LIBRARIES})

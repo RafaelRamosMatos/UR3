@@ -1112,33 +1112,6 @@ src/read_data.cpp.s:
 	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/interface.dir/build.make ur3/CMakeFiles/interface.dir/src/read_data.cpp.s
 .PHONY : src/read_data.cpp.s
 
-src/reverse_word.o: src/reverse_word.cpp.o
-
-.PHONY : src/reverse_word.o
-
-# target to build an object file
-src/reverse_word.cpp.o:
-	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/interface.dir/build.make ur3/CMakeFiles/interface.dir/src/reverse_word.cpp.o
-.PHONY : src/reverse_word.cpp.o
-
-src/reverse_word.i: src/reverse_word.cpp.i
-
-.PHONY : src/reverse_word.i
-
-# target to preprocess a source file
-src/reverse_word.cpp.i:
-	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/interface.dir/build.make ur3/CMakeFiles/interface.dir/src/reverse_word.cpp.i
-.PHONY : src/reverse_word.cpp.i
-
-src/reverse_word.s: src/reverse_word.cpp.s
-
-.PHONY : src/reverse_word.s
-
-# target to generate assembly for a file
-src/reverse_word.cpp.s:
-	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/interface.dir/build.make ur3/CMakeFiles/interface.dir/src/reverse_word.cpp.s
-.PHONY : src/reverse_word.cpp.s
-
 src/send_script.o: src/send_script.cpp.o
 
 .PHONY : src/send_script.o
@@ -1249,9 +1222,6 @@ help:
 	@echo "... src/read_data.o"
 	@echo "... src/read_data.i"
 	@echo "... src/read_data.s"
-	@echo "... src/reverse_word.o"
-	@echo "... src/reverse_word.i"
-	@echo "... src/reverse_word.s"
 	@echo "... src/send_script.o"
 	@echo "... src/send_script.i"
 	@echo "... src/send_script.s"
