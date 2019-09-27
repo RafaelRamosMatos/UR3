@@ -3,6 +3,7 @@
 
 ur3/CMakeFiles/interface.dir/src/interface.cpp.o
  /home/rafael/UR3/catkin_ur3/devel/include/ur3/end_Effector_msg.h
+ /home/rafael/UR3/catkin_ur3/devel/include/ur3/ref_msg.h
  /home/rafael/UR3/catkin_ur3/src/ur3/include/ur3/open_socket.h
  /home/rafael/UR3/catkin_ur3/src/ur3/include/ur3/read_data.h
  /home/rafael/UR3/catkin_ur3/src/ur3/include/ur3/send_script.h

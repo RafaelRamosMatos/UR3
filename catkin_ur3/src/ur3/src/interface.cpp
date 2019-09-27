@@ -14,7 +14,7 @@
 #include "ur3/end_Effector_msg.h"
 #include "geometry_msgs/Wrench.h"
 #include "geometry_msgs/Pose.h"
-#include "std_msgs/Float32MultiArray.h"
+#include "ur3/ref_msg.h"
 #include <X11/keysymdef.h>
 #include <sys/socket.h>
 #include <stdlib.h> 
@@ -26,7 +26,6 @@
 #include <stdlib.h>
 #include <sstream>
 #include <inttypes.h>
-#include <math.h>
 #include <ctime>
 #include "open_socket.h"
 #include "send_script.h"
@@ -53,31 +52,31 @@ void send_data(int new_socket){
 
   int32_t buffer_in_[8];
   ros::NodeHandle node;
-  ros::Publisher ref_pub = node.advertise<std_msgs::Float32MultiArray>("ref",1000);
-  std_msgs::Float32MultiArray ref;
+  ros::Publisher ref_pub = node.advertise<ur3::ref_msg>("reference",10);
+  ur3::ref_msg ref;
 
-  ref.data.resize(6);
+  ref.refer.data.resize(6);
   ros::Rate loop_rate(125);
   float norma_float = 1000000.0;
   while (ros::ok()){
-	  	ref.data[0] = refe[0];
+	  	ref.refer.data[0] = refe[0];
 		buffer_in_[0] = (int)(refe[0]*norma_float);
 		buffer_in_[0] = reverse_word(buffer_in_[0]);
-		ref.data[1] = refe[1];
+		ref.refer.data[1] = refe[1];
 		buffer_in_[1] = (int)(refe[1]*norma_float);
 		buffer_in_[1] = reverse_word(buffer_in_[1]);
-		ref.data[2] = refe[2];
+		ref.refer.data[2] = refe[2];
 		buffer_in_[2] = (int)(refe[2]*norma_float);
 		buffer_in_[2] = reverse_word(buffer_in_[2]);
-		ref.data[3] = refe[3];
+		ref.refer.data[3] = refe[3];
 		buffer_in_[3] = (int)(refe[3]*norma_float);
 		buffer_in_[3] = reverse_word(buffer_in_[3]);
-		ref.data[4] = refe[4];
+		ref.refer.data[4] = refe[4];
 		buffer_in_[4] = (int)(refe[4]*norma_float);
 		buffer_in_[4] = reverse_word(buffer_in_[4]);
 		
 		// buffer_in_[5] = (int)((prbs_inp[prbs_count]/4)*norma_float); //sending prbs signal to joint 5
-		ref.data[5] = refe[5];
+		ref.refer.data[5] = refe[5];
 		buffer_in_[5] = (int)(refe[5]*norma_float);
 		buffer_in_[5] = reverse_word(buffer_in_[5]);
 		// gripper
@@ -91,7 +90,7 @@ void send_data(int new_socket){
 		buffer_in_[7] = reverse_word(buffer_in_[7]);
 		send(new_socket, buffer_in_, 32, 0);
 		/////////////////////////////////////////////////////////
-		
+		ref.header.stamp = ros::Time::now();
 		ref_pub.publish(ref);
 		loop_rate.sleep();
   }
@@ -160,8 +159,8 @@ int main(int argc, char **argv){
 	boost::thread thread_b(send_data,new_socket);
 	ros::NodeHandle node;
 	//Declaração das publicões 
-	ros::Publisher arm_pub = node.advertise<sensor_msgs::JointState>("arm",1000);
-	ros::Publisher end_Effector_pub = node.advertise<ur3::end_Effector_msg>("end_effector",1000);
+	ros::Publisher arm_pub = node.advertise<sensor_msgs::JointState>("arm",10);
+	ros::Publisher end_Effector_pub = node.advertise<ur3::end_Effector_msg>("end_effector",10);
 	///////////////////////////////////////////////////////////////////////////////////
 	ros::Subscriber sub_joy = node.subscribe("joy", 10, joyCallback);
 	ros::Rate loop_rate(125);
@@ -185,7 +184,7 @@ int main(int argc, char **argv){
 	int32_t vector_arm[3];
 	int8_t buffer_out[156]; 
 	int b;
-	
+
 	//////////////////////////////////////////////////////////
 	printf("The robotic arm is ready!\n");
     while (ros::ok()){

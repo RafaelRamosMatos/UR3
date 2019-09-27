@@ -273,21 +273,6 @@ ur3_generate_messages_lisp/fast:
 .PHONY : ur3_generate_messages_lisp/fast
 
 # Convenience name for target.
-ur3/CMakeFiles/ur3_geneus.dir/rule:
-	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/ur3_geneus.dir/rule
-.PHONY : ur3/CMakeFiles/ur3_geneus.dir/rule
-
-# Convenience name for target.
-ur3_geneus: ur3/CMakeFiles/ur3_geneus.dir/rule
-
-.PHONY : ur3_geneus
-
-# fast build rule for target.
-ur3_geneus/fast:
-	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/build
-.PHONY : ur3_geneus/fast
-
-# Convenience name for target.
 ur3/CMakeFiles/ur3_generate_messages_eus.dir/rule:
 	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/ur3_generate_messages_eus.dir/rule
 .PHONY : ur3/CMakeFiles/ur3_generate_messages_eus.dir/rule
@@ -333,21 +318,6 @@ ur3_generate_messages_cpp/fast:
 .PHONY : ur3_generate_messages_cpp/fast
 
 # Convenience name for target.
-ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/rule:
-	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/rule
-.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/rule
-
-# Convenience name for target.
-_ur3_generate_messages_check_deps_arm_msg: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/rule
-
-.PHONY : _ur3_generate_messages_check_deps_arm_msg
-
-# fast build rule for target.
-_ur3_generate_messages_check_deps_arm_msg/fast:
-	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/build
-.PHONY : _ur3_generate_messages_check_deps_arm_msg/fast
-
-# Convenience name for target.
 ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/rule:
 	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/rule
 .PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/rule
@@ -361,6 +331,36 @@ _ur3_generate_messages_check_deps_gripper_msg: ur3/CMakeFiles/_ur3_generate_mess
 _ur3_generate_messages_check_deps_gripper_msg/fast:
 	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/build
 .PHONY : _ur3_generate_messages_check_deps_gripper_msg/fast
+
+# Convenience name for target.
+ur3/CMakeFiles/ur3_geneus.dir/rule:
+	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/ur3_geneus.dir/rule
+.PHONY : ur3/CMakeFiles/ur3_geneus.dir/rule
+
+# Convenience name for target.
+ur3_geneus: ur3/CMakeFiles/ur3_geneus.dir/rule
+
+.PHONY : ur3_geneus
+
+# fast build rule for target.
+ur3_geneus/fast:
+	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/build
+.PHONY : ur3_geneus/fast
+
+# Convenience name for target.
+ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/rule:
+	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/rule
+.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/rule
+
+# Convenience name for target.
+_ur3_generate_messages_check_deps_ref_msg: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/rule
+
+.PHONY : _ur3_generate_messages_check_deps_ref_msg
+
+# fast build rule for target.
+_ur3_generate_messages_check_deps_ref_msg/fast:
+	cd /home/rafael/UR3/catkin_ur3/build && $(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/build
+.PHONY : _ur3_generate_messages_check_deps_ref_msg/fast
 
 # Convenience name for target.
 ur3/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
@@ -1159,14 +1159,14 @@ help:
 	@echo "... ur3_generate_messages_nodejs"
 	@echo "... ur3_genlisp"
 	@echo "... ur3_generate_messages_lisp"
-	@echo "... ur3_geneus"
 	@echo "... edit_cache"
 	@echo "... ur3_generate_messages_eus"
 	@echo "... ur3_gencpp"
 	@echo "... ur3_generate_messages_cpp"
-	@echo "... _ur3_generate_messages_check_deps_arm_msg"
 	@echo "... install/local"
 	@echo "... _ur3_generate_messages_check_deps_gripper_msg"
+	@echo "... ur3_geneus"
+	@echo "... _ur3_generate_messages_check_deps_ref_msg"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... _ur3_generate_messages_check_deps_end_Effector_msg"

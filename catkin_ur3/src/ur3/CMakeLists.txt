@@ -58,7 +58,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
    FILES
-   arm_msg.msg
+   ref_msg.msg
    gripper_msg.msg
    end_Effector_msg.msg
  )

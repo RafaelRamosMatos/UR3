@@ -426,12 +426,12 @@ ur3/clean: ur3/CMakeFiles/open_socket.dir/clean
 ur3/clean: ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/clean
 ur3/clean: ur3/CMakeFiles/ur3_genlisp.dir/clean
 ur3/clean: ur3/CMakeFiles/ur3_generate_messages_lisp.dir/clean
-ur3/clean: ur3/CMakeFiles/ur3_geneus.dir/clean
 ur3/clean: ur3/CMakeFiles/ur3_generate_messages_eus.dir/clean
 ur3/clean: ur3/CMakeFiles/ur3_gencpp.dir/clean
 ur3/clean: ur3/CMakeFiles/ur3_generate_messages_cpp.dir/clean
-ur3/clean: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/clean
 ur3/clean: ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/clean
+ur3/clean: ur3/CMakeFiles/ur3_geneus.dir/clean
+ur3/clean: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/clean
 ur3/clean: ur3/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 ur3/clean: ur3/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 ur3/clean: ur3/CMakeFiles/_ur3_generate_messages_check_deps_end_Effector_msg.dir/clean
@@ -634,8 +634,8 @@ clean: ur3/CMakeFiles/open_socket.dir/clean
 # Target rules for target ur3/CMakeFiles/ur3_generate_messages_nodejs.dir
 
 # All Build rule for target.
-ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/all
+ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/all: ur3/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_end_Effector_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_nodejs.dir/all: ur3/CMakeFiles/control_msgs_generate_messages_nodejs.dir/all
@@ -703,8 +703,8 @@ clean: ur3/CMakeFiles/ur3_genlisp.dir/clean
 # Target rules for target ur3/CMakeFiles/ur3_generate_messages_lisp.dir
 
 # All Build rule for target.
-ur3/CMakeFiles/ur3_generate_messages_lisp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_lisp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/all
+ur3/CMakeFiles/ur3_generate_messages_lisp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_lisp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_end_Effector_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_lisp.dir/all: ur3/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 ur3/CMakeFiles/ur3_generate_messages_lisp.dir/all: ur3/CMakeFiles/control_msgs_generate_messages_lisp.dir/all
@@ -737,43 +737,11 @@ clean: ur3/CMakeFiles/ur3_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target ur3/CMakeFiles/ur3_geneus.dir
-
-# All Build rule for target.
-ur3/CMakeFiles/ur3_geneus.dir/all: ur3/CMakeFiles/ur3_generate_messages_eus.dir/all
-	$(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/depend
-	$(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num= "Built target ur3_geneus"
-.PHONY : ur3/CMakeFiles/ur3_geneus.dir/all
-
-# Build rule for subdir invocation for target.
-ur3/CMakeFiles/ur3_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/ur3_geneus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 0
-.PHONY : ur3/CMakeFiles/ur3_geneus.dir/rule
-
-# Convenience name for target.
-ur3_geneus: ur3/CMakeFiles/ur3_geneus.dir/rule
-
-.PHONY : ur3_geneus
-
-# clean rule for target.
-ur3/CMakeFiles/ur3_geneus.dir/clean:
-	$(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/clean
-.PHONY : ur3/CMakeFiles/ur3_geneus.dir/clean
-
-# clean rule for target.
-clean: ur3/CMakeFiles/ur3_geneus.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target ur3/CMakeFiles/ur3_generate_messages_eus.dir
 
 # All Build rule for target.
-ur3/CMakeFiles/ur3_generate_messages_eus.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_eus.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/all
+ur3/CMakeFiles/ur3_generate_messages_eus.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_eus.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_end_Effector_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_eus.dir/all: ur3/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 ur3/CMakeFiles/ur3_generate_messages_eus.dir/all: ur3/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
@@ -841,8 +809,8 @@ clean: ur3/CMakeFiles/ur3_gencpp.dir/clean
 # Target rules for target ur3/CMakeFiles/ur3_generate_messages_cpp.dir
 
 # All Build rule for target.
-ur3/CMakeFiles/ur3_generate_messages_cpp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_cpp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/all
+ur3/CMakeFiles/ur3_generate_messages_cpp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_cpp.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_end_Effector_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_cpp.dir/all: ur3/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 ur3/CMakeFiles/ur3_generate_messages_cpp.dir/all: ur3/CMakeFiles/control_msgs_generate_messages_cpp.dir/all
@@ -875,38 +843,6 @@ clean: ur3/CMakeFiles/ur3_generate_messages_cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir
-
-# All Build rule for target.
-ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all:
-	$(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/depend
-	$(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num= "Built target _ur3_generate_messages_check_deps_arm_msg"
-.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all
-
-# Build rule for subdir invocation for target.
-ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 0
-.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/rule
-
-# Convenience name for target.
-_ur3_generate_messages_check_deps_arm_msg: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/rule
-
-.PHONY : _ur3_generate_messages_check_deps_arm_msg
-
-# clean rule for target.
-ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/clean:
-	$(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/clean
-.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/clean
-
-# clean rule for target.
-clean: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir
 
 # All Build rule for target.
@@ -935,6 +871,70 @@ ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/clean:
 
 # clean rule for target.
 clean: ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target ur3/CMakeFiles/ur3_geneus.dir
+
+# All Build rule for target.
+ur3/CMakeFiles/ur3_geneus.dir/all: ur3/CMakeFiles/ur3_generate_messages_eus.dir/all
+	$(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/depend
+	$(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num= "Built target ur3_geneus"
+.PHONY : ur3/CMakeFiles/ur3_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+ur3/CMakeFiles/ur3_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/ur3_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 0
+.PHONY : ur3/CMakeFiles/ur3_geneus.dir/rule
+
+# Convenience name for target.
+ur3_geneus: ur3/CMakeFiles/ur3_geneus.dir/rule
+
+.PHONY : ur3_geneus
+
+# clean rule for target.
+ur3/CMakeFiles/ur3_geneus.dir/clean:
+	$(MAKE) -f ur3/CMakeFiles/ur3_geneus.dir/build.make ur3/CMakeFiles/ur3_geneus.dir/clean
+.PHONY : ur3/CMakeFiles/ur3_geneus.dir/clean
+
+# clean rule for target.
+clean: ur3/CMakeFiles/ur3_geneus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir
+
+# All Build rule for target.
+ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all:
+	$(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/depend
+	$(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rafael/UR3/catkin_ur3/build/CMakeFiles --progress-num= "Built target _ur3_generate_messages_check_deps_ref_msg"
+.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all
+
+# Build rule for subdir invocation for target.
+ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/UR3/catkin_ur3/build/CMakeFiles 0
+.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/rule
+
+# Convenience name for target.
+_ur3_generate_messages_check_deps_ref_msg: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/rule
+
+.PHONY : _ur3_generate_messages_check_deps_ref_msg
+
+# clean rule for target.
+ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/clean:
+	$(MAKE) -f ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/build.make ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/clean
+.PHONY : ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/clean
+
+# clean rule for target.
+clean: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/clean
 
 .PHONY : clean
 
@@ -1564,8 +1564,8 @@ clean: ur3/CMakeFiles/ur3_generate_messages.dir/clean
 # Target rules for target ur3/CMakeFiles/ur3_generate_messages_py.dir
 
 # All Build rule for target.
-ur3/CMakeFiles/ur3_generate_messages_py.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_arm_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_py.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_gripper_msg.dir/all
+ur3/CMakeFiles/ur3_generate_messages_py.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_ref_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_py.dir/all: ur3/CMakeFiles/std_msgs_generate_messages_py.dir/all
 ur3/CMakeFiles/ur3_generate_messages_py.dir/all: ur3/CMakeFiles/_ur3_generate_messages_check_deps_end_Effector_msg.dir/all
 ur3/CMakeFiles/ur3_generate_messages_py.dir/all: ur3/CMakeFiles/control_msgs_generate_messages_py.dir/all

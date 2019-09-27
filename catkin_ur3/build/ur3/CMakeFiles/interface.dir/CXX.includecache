@@ -34,6 +34,26 @@ geometry_msgs/Twist.h
 geometry_msgs/Wrench.h
 -
 
+/home/rafael/UR3/catkin_ur3/devel/include/ur3/ref_msg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+std_msgs/Float32MultiArray.h
+-
+
 /home/rafael/UR3/catkin_ur3/src/ur3/include/ur3/open_socket.h
 X11/keysymdef.h
 -
@@ -141,8 +161,8 @@ geometry_msgs/Wrench.h
 /home/rafael/UR3/catkin_ur3/src/ur3/src/geometry_msgs/Wrench.h
 geometry_msgs/Pose.h
 /home/rafael/UR3/catkin_ur3/src/ur3/src/geometry_msgs/Pose.h
-std_msgs/Float32MultiArray.h
-/home/rafael/UR3/catkin_ur3/src/ur3/src/std_msgs/Float32MultiArray.h
+ur3/ref_msg.h
+/home/rafael/UR3/catkin_ur3/src/ur3/src/ur3/ref_msg.h
 X11/keysymdef.h
 -
 sys/socket.h
@@ -164,8 +184,6 @@ stdlib.h
 sstream
 -
 inttypes.h
--
-math.h
 -
 ctime
 -
