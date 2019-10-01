@@ -49,7 +49,7 @@ inline int reverse_word(int32_t num){
 }  
 
 void send_data(int new_socket){
-
+   
   int32_t buffer_in_[8];
   ros::NodeHandle node;
   ros::Publisher ref_pub = node.advertise<ur3::ref_msg>("reference",10);
@@ -58,7 +58,18 @@ void send_data(int new_socket){
   ref.refer.data.resize(6);
   ros::Rate loop_rate(125);
   float norma_float = 1000000.0;
+  
+  //Experimento usando um sinal de entrada prbs
+	float* prbs_inp = read_data(); 
+
+  int prbs_count = 0;
   while (ros::ok()){
+	  	//referencia 
+		if(prbs_count >=2998){
+			 prbs_count = 0;
+		}		
+		prbs_count ++;
+
 	  	ref.refer.data[0] = refe[0];
 		buffer_in_[0] = (int)(refe[0]*norma_float);
 		buffer_in_[0] = reverse_word(buffer_in_[0]);
@@ -75,9 +86,9 @@ void send_data(int new_socket){
 		buffer_in_[4] = (int)(refe[4]*norma_float);
 		buffer_in_[4] = reverse_word(buffer_in_[4]);
 		
-		// buffer_in_[5] = (int)((prbs_inp[prbs_count]/4)*norma_float); //sending prbs signal to joint 5
+		buffer_in_[5] = (int)((prbs_inp[prbs_count]/4)*norma_float); //sending prbs signal to joint 5
 		ref.refer.data[5] = refe[5];
-		buffer_in_[5] = (int)(refe[5]*norma_float);
+		//buffer_in_[5] = (int)(refe[5]*norma_float);
 		buffer_in_[5] = reverse_word(buffer_in_[5]);
 		// gripper
 		
@@ -141,8 +152,7 @@ int main(int argc, char **argv){
 	refe[0] = 0; refe[1] = 0; refe[2] = 0; refe[3] = 0; refe[4] = 0;
 	refe[5] = 0; refe[6] = 40; refe[7] = 0; refe[8] = 0;
 	
-	//Experimento usando um sinal de entrada prbs
-	float* prbs_inp = read_data(); 
+	
 	// primeira coisa:
 	// tem que enviar o arquivo urscript
 	send_script(); // a função send_script envia o arquivo para o robô
@@ -189,17 +199,10 @@ int main(int argc, char **argv){
 	printf("The robotic arm is ready!\n");
     while (ros::ok()){
 		/////////////////////////////////////////////////////
-		// //referencia 
-		// if(prbs_count >=2998){
-		// 	 prbs_count = 0;
-		// }
-		// // printf("%f\n",prbs_inp[prbs_count]);
 		
-		// prbs_count ++;
 		
 		/////////////////////////////////////////////////////////////
 		b = recv(new_socket, &buffer_out, 156, 0);
-		
 		///////////////////////////////////////////////////////////
 		//beginning arm 
 		memcpy(&vector_arm, &buffer_out[0], 3*sizeof(int32_t));

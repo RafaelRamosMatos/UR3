@@ -73,7 +73,6 @@
  
  >> A parte de escrever dados foi retirada. Agora os dados são inscritos usando o comando rosbag record /arm /end_effector /ref. 
 
- >> Com o rosbag pode-se 
 
  >> Proximos dias o envio de dados será feito por um thread fora do loop dos ros.
 
@@ -81,5 +80,9 @@
 
 ## __27-09-2019__
 >> A thread de envio de dados foi feita e está funcionado sem erros.
->> as perdadas de pacotes não ocorrem mais. Foi feito 5 experimentos de 5 minutos cadas e não houve perdas de pacotes. 
+>> As perdadas de pacotes não ocorrem mais. Foi feito 5 experimentos de 5 minutos cadas e não houve perdas de pacotes. 
+
+## __28-09-2019__
+>>Hoje, vou entrar nos diretórios do ur3, usando sftp, na tentativa de achar aguma função que ler as correntes dos motores do robô.
+>>
 ## __FIM__ 

@@ -24,7 +24,7 @@ int send_script(){
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(30002);
     serv_addr.sin_addr.s_addr = inet_addr("192.168.1.56"); // real
-    //serv_addr.sin_addr.s_addr = inet_addr("0.0.0.0"); // simulador 
+    // serv_addr.sin_addr.s_addr = inet_addr("0.0.0.0"); // simulador 
 
     b=connect(sfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
     if (b==-1) {
