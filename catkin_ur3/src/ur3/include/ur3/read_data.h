@@ -1,5 +1,5 @@
+#include <sstream>
+#include <iostream>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <cstdio>
-float* read_data();
+#include <fstream>
+float** read_data();

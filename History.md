@@ -85,4 +85,7 @@
 ## __28-09-2019__
 >>Hoje, vou entrar nos diretórios do ur3, usando sftp, na tentativa de achar aguma função que ler as correntes dos motores do robô.
 >>
+__01-10-2019__
+
+>> Depois de muita pequisa, descobrimos que exite uns registradores que guardam as correntes. Usado a funça read_port_register(register number) podemos ler as correntes. A tal função retorna a leitura da corrente mA os registradores das juntas vão de 290 a 295 que vai da base ao pulso.
 ## __FIM__ 
