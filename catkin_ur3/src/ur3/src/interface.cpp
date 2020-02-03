@@ -64,7 +64,7 @@ void send_data(int new_socket){
   float x  = 0;
   while (ros::ok()){
 	  	// //referencia 
-		if(data_count >=5000){
+		if(data_count >=2500){
 		  	data_count = 0;
 		 	exit(0);
 		}		
@@ -76,12 +76,12 @@ void send_data(int new_socket){
 		buffer_in_[0] = (int)(data_input[data_count][0]*norma_float); //(int)((refe[0])*norma_float);
 		buffer_in_[0] = reverse_word(buffer_in_[0]);
 
-		ref.refer.data[1] = -ref_sin - 0.5; //data_input[1][data_count]; //refe[1];
-		buffer_in_[1] = (int)(-ref_sin*norma_float); //(int)((refe[1])*norma_float);
+		ref.refer.data[1] = data_input[1][data_count]; //refe[1];
+		buffer_in_[1] = (int)(data_input[data_count][1]*norma_float); //(int)((refe[1])*norma_float);
 		buffer_in_[1] = reverse_word(buffer_in_[1]);
 
-		ref.refer.data[2] = ref_sin - 0.5; //data_input[2][data_count]; //refe[2];
-		buffer_in_[2] = (int)(ref_sin*norma_float); //(int)((refe[2])*norma_float);
+		ref.refer.data[2] = data_input[2][data_count]; //refe[2];
+		buffer_in_[2] = (int)(data_input[data_count][2]*norma_float); //(int)((refe[2])*norma_float);
 		buffer_in_[2] = reverse_word(buffer_in_[2]);
 
 		ref.refer.data[3] = data_input[3][data_count]; //refe[3];

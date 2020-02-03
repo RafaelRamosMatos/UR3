@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rafael/UR3/catkin_ur3/src/ur3/src/read_data.cpp
+sstream
+-
+fstream
+-
+cstring
+-
+ctime
+-
+iostream
+-
+unistd.h
+-
+cstdio
+-
+cstdlib
+-
+
