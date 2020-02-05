@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5aade/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5aade.dir/build.make CMakeFiles/cmTC_5aade.dir/build
-make[1]: Entering directory '/home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5aade.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_5aade.dir/CheckSymbolExists.c.o   -c /home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_5aade
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5aade.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5aade.dir/CheckSymbolExists.c.o  -o cmTC_5aade 
-CMakeFiles/cmTC_5aade.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_39d6e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_39d6e.dir/build.make CMakeFiles/cmTC_39d6e.dir/build
+make[1]: Entering directory '/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_39d6e.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_39d6e.dir/CheckSymbolExists.c.o   -c /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_39d6e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39d6e.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_39d6e.dir/CheckSymbolExists.c.o  -o cmTC_39d6e 
+CMakeFiles/cmTC_39d6e.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5aade.dir/build.make:97: recipe for target 'cmTC_5aade' failed
-make[1]: *** [cmTC_5aade] Error 1
-make[1]: Leaving directory '/home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5aade/fast' failed
-make: *** [cmTC_5aade/fast] Error 2
+CMakeFiles/cmTC_39d6e.dir/build.make:97: recipe for target 'cmTC_39d6e' failed
+make[1]: *** [cmTC_39d6e] Error 1
+make[1]: Leaving directory '/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_39d6e/fast' failed
+make: *** [cmTC_39d6e/fast] Error 2
 
-File /home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_55a3c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_55a3c.dir/build.make CMakeFiles/cmTC_55a3c.dir/build
-make[1]: Entering directory '/home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_55a3c.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_55a3c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_55a3c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55a3c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_55a3c.dir/CheckFunctionExists.c.o  -o cmTC_55a3c -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_f648d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f648d.dir/build.make CMakeFiles/cmTC_f648d.dir/build
+make[1]: Entering directory '/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f648d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f648d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f648d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f648d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f648d.dir/CheckFunctionExists.c.o  -o cmTC_f648d -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_55a3c.dir/build.make:97: recipe for target 'cmTC_55a3c' failed
-make[1]: *** [cmTC_55a3c] Error 1
-make[1]: Leaving directory '/home/rafael/UR3/catkin_ur3/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_55a3c/fast' failed
-make: *** [cmTC_55a3c/fast] Error 2
+CMakeFiles/cmTC_f648d.dir/build.make:97: recipe for target 'cmTC_f648d' failed
+make[1]: *** [cmTC_f648d] Error 1
+make[1]: Leaving directory '/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f648d/fast' failed
+make: *** [cmTC_f648d/fast] Error 2
 
 

@@ -67,14 +67,14 @@ set(ur3_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ur3_SOURCE_PREFIX /home/rafael/UR3/catkin_ur3/src/ur3)
-  set(ur3_DEVEL_PREFIX /home/rafael/UR3/catkin_ur3/devel)
+  set(ur3_SOURCE_PREFIX /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src/ur3)
+  set(ur3_DEVEL_PREFIX /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel)
   set(ur3_INSTALL_PREFIX "")
   set(ur3_PREFIX ${ur3_DEVEL_PREFIX})
 else()
   set(ur3_SOURCE_PREFIX "")
   set(ur3_DEVEL_PREFIX "")
-  set(ur3_INSTALL_PREFIX /home/rafael/UR3/catkin_ur3/install)
+  set(ur3_INSTALL_PREFIX /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/install)
   set(ur3_PREFIX ${ur3_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rafael/UR3/catkin_ur3/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,4 +1,4 @@
-prefix=/home/rafael/UR3/catkin_ur3/install
+prefix=/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/install
 
 Name: ur3
 Description: Description of ur3

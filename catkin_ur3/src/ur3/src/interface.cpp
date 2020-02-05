@@ -72,27 +72,27 @@ void send_data(int new_socket){
 		x = x + .01;
 		ref_sin = sin(x);
 		//printf("data_count %i\n", data_count);
-	  	ref.refer.data[0] = data_input[0][data_count]; //refe[0];
+	  	ref.refer.data[0] = data_input[data_count][0]; //refe[0];
 		buffer_in_[0] = (int)(data_input[data_count][0]*norma_float); //(int)((refe[0])*norma_float);
 		buffer_in_[0] = reverse_word(buffer_in_[0]);
 
-		ref.refer.data[1] = data_input[1][data_count]; //refe[1];
+		ref.refer.data[1] = data_input[data_count][1]; //refe[1];
 		buffer_in_[1] = (int)(data_input[data_count][1]*norma_float); //(int)((refe[1])*norma_float);
 		buffer_in_[1] = reverse_word(buffer_in_[1]);
 
-		ref.refer.data[2] = data_input[2][data_count]; //refe[2];
-		buffer_in_[2] = (int)(data_input[data_count][2]*norma_float); //(int)((refe[2])*norma_float);
+		ref.refer.data[2] = data_input[data_count][2]; //refe[2];
+		buffer_in_[2] = (int)(data_input[data_count][1]); //(int)((refe[2])*norma_float);
 		buffer_in_[2] = reverse_word(buffer_in_[2]);
 
-		ref.refer.data[3] = data_input[3][data_count]; //refe[3];
-		buffer_in_[3] = (int)(data_input[data_count][3]*norma_float); //(int)((refe[3])*norma_float);
+		ref.refer.data[3] = data_input[data_count][3]; //refe[3];
+		buffer_in_[3] = (int)(data_input[data_count][1]*norma_float); //(int)((refe[3])*norma_float);
 		buffer_in_[3] = reverse_word(buffer_in_[3]);
 
-		ref.refer.data[4] = data_input[4][data_count]; //refe[4];
+		ref.refer.data[4] = data_input[data_count][4]; //refe[4];
 		buffer_in_[4] = (int)(data_input[data_count][4]*norma_float); //(int)((refe[4])*norma_float);
 		buffer_in_[4] = reverse_word(buffer_in_[4]);
 
-		ref.refer.data[5] = data_input[5][data_count]; ////refe[5];
+		ref.refer.data[5] = data_input[data_count][5]; ////refe[5];
 		buffer_in_[5] = (int)(data_input[data_count][5]*norma_float); //sending vel6 signal to joint 5
 		buffer_in_[5] = reverse_word(buffer_in_[5]);
 

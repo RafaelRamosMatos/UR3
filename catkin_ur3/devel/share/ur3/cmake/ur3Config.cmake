@@ -67,14 +67,14 @@ set(ur3_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ur3_SOURCE_PREFIX /home/rafael/UR3/catkin_ur3/src/ur3)
-  set(ur3_DEVEL_PREFIX /home/rafael/UR3/catkin_ur3/devel)
+  set(ur3_SOURCE_PREFIX /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src/ur3)
+  set(ur3_DEVEL_PREFIX /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel)
   set(ur3_INSTALL_PREFIX "")
   set(ur3_PREFIX ${ur3_DEVEL_PREFIX})
 else()
   set(ur3_SOURCE_PREFIX "")
   set(ur3_DEVEL_PREFIX "")
-  set(ur3_INSTALL_PREFIX /home/rafael/UR3/catkin_ur3/install)
+  set(ur3_INSTALL_PREFIX /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/install)
   set(ur3_PREFIX ${ur3_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ur3_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/rafael/UR3/catkin_ur3/devel/include;/home/rafael/UR3/catkin_ur3/src/ur3/include;/home/rafael/UR3/catkin_ur3/src/ur3/msg " STREQUAL " ")
+if(NOT "/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel/include;/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src/ur3/include;/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src/ur3/msg " STREQUAL " ")
   set(ur3_INCLUDE_DIRS "")
-  set(_include_dirs "/home/rafael/UR3/catkin_ur3/devel/include;/home/rafael/UR3/catkin_ur3/src/ur3/include;/home/rafael/UR3/catkin_ur3/src/ur3/msg")
+  set(_include_dirs "/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel/include;/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src/ur3/include;/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src/ur3/msg")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/rafael/UR3/catkin_ur3/devel/include;/home/rafael/UR3/catkin_ur3/sr
         message(FATAL_ERROR "Project 'ur3' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ur3' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rafael/UR3/catkin_ur3/src/ur3/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ur3' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src/ur3/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ur3_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rafael/UR3/catkin_ur3/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

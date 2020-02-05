@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/rafael/UR3/catkin_ur3/devel/setup.sh
+    local-name: /home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel/setup.sh

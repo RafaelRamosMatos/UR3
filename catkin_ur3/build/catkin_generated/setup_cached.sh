@@ -7,8 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/rafael/UR3/catkin_ur3/devel:$CMAKE_PREFIX_PATH"
-export PATH="/opt/ros/melodic/bin:/home/rafael/anaconda3/bin:/home/rafael/anaconda3/condabin:/home/rafael/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
-export PWD="/home/rafael/UR3/catkin_ur3/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/rafael/UR3/catkin_ur3/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/rafael/UR3/catkin_ur3/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/rafael/UR3_Proj/UR3_ROS_Interface/catkin_ur3/src:$ROS_PACKAGE_PATH"
